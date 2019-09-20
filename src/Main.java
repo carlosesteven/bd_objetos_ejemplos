@@ -5,6 +5,11 @@ import org.neodatis.odb.core.query.IQuery;
 import org.neodatis.odb.core.query.criteria.Where;
 import org.neodatis.odb.impl.core.query.criteria.CriteriaQuery;
 
+/**
+ * USANDO: http://neodatis.wikidot.com/start
+ * BASE DEL EJEMPLO: http://www.programandoapasitos.com/2016/03/acceso-datos-neodatis.html
+ */
+
 public class Main {
 
     private static final String ODB_NAME = "base_datos_personas.neodatis";
