@@ -1,3 +1,5 @@
+package EJEMPLO.Objetos;
+
 public class Persona {
 
     private int cedula;
@@ -7,7 +9,7 @@ public class Persona {
     private String ciudad;
     private String pais;
 
-    Persona(int cedula, String primer_nombre, String segundo_nombre, char sexo, String ciudad, String pais) {
+    public Persona(int cedula, String primer_nombre, String segundo_nombre, char sexo, String ciudad, String pais) {
         this.cedula = cedula;
         this.primer_nombre = primer_nombre;
         this.segundo_nombre = segundo_nombre;

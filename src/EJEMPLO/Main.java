@@ -1,3 +1,6 @@
+package EJEMPLO;
+
+import EJEMPLO.Objetos.Persona;
 import org.neodatis.odb.ODB;
 import org.neodatis.odb.ODBFactory;
 import org.neodatis.odb.Objects;
@@ -12,13 +15,14 @@ import org.neodatis.odb.impl.core.query.criteria.CriteriaQuery;
 
 public class Main {
 
-    private static final String ODB_NAME = "base_datos_personas.neodatis";
+    private static final String ODB_NAME = "BD_ejemplo.neodatis";
 
     public static void main(String[] args)
     {
-        //borrarBaseDatosActual();
-        //insertaDatos();
+        borrarBaseDatosActual();
+        insertaDatos();
         cantidadDatos();
+        ordenarPorNombre();
         filtraPorCiudaBogota();
         filtraPorCiudaCali();
     }
@@ -55,7 +59,6 @@ public class Main {
 
         } finally {
             if (odb != null) {
-                // Close the database
                 odb.close();
             }
         }
@@ -93,7 +96,6 @@ public class Main {
 
         } finally {
             if (odb != null) {
-                // Close the database
                 odb.close();
             }
         }
@@ -132,6 +134,69 @@ public class Main {
         }
     }
 
+    private static void ordenarPorNombre()
+    {
+        ODB odb = null;
+        try {
+            odb = ODBFactory.open(ODB_NAME);
+
+            IQuery query = new CriteriaQuery( Persona.class )
+                    .orderByAsc("primer_nombre");
+
+            Objects<Persona> objects = odb.getObjects(query);
+
+            System.out.print("\n");
+            System.out.println("Lista ordenada de manera ASC por nombre.");
+            System.out.print("\n");
+
+            int i = 1;
+
+            while(objects.hasNext())
+            {
+                Persona actual = objects.next();
+                System.out.println(
+                        "[ " + i + " ] "
+                                + actual.getPrimer_nombre()
+                                + " "
+                                + actual.getSegundo_nombre()
+                );
+                i++;
+            }
+
+            System.out.print("\n");
+            System.out.println("Lista ordenada de manera DES por nombre.");
+            System.out.print("\n");
+
+            query = new CriteriaQuery( Persona.class )
+                    .orderByDesc("primer_nombre");
+
+            objects = odb.getObjects(query);
+
+            System.out.print("\n");
+            System.out.println("Lista ordenada de manera ASC por nombre.");
+            System.out.print("\n");
+
+            i = 1;
+
+            while(objects.hasNext())
+            {
+                Persona actual = objects.next();
+                System.out.println(
+                        "[ " + i + " ] "
+                                + actual.getPrimer_nombre()
+                                + " "
+                                + actual.getSegundo_nombre()
+                );
+                i++;
+            }
+
+        } finally {
+            if (odb != null) {
+                odb.close();
+            }
+        }
+    }
+
     private static void borrarBaseDatosActual()
     {
         Objects objects;
@@ -147,7 +212,6 @@ public class Main {
             }
         } finally {
             if (odb != null) {
-                // Close the database
                 odb.close();
             }
         }
