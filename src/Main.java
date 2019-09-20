@@ -16,8 +16,8 @@ public class Main {
 
     public static void main(String[] args)
     {
-        borrarBaseDatosActual();
-        insertaDatos();
+        //borrarBaseDatosActual();
+        //insertaDatos();
         cantidadDatos();
         filtraPorCiudaBogota();
         filtraPorCiudaCali();
@@ -117,7 +117,6 @@ public class Main {
                 Persona actual = objects.next();
                 System.out.println(
                         "[ " + i + " ] "
-                        +  actual.getCedula() + " "
                         + actual.getPrimer_nombre()
                         + " "
                         + actual.getSegundo_nombre()
@@ -164,31 +163,89 @@ public class Main {
                     111111111,
                     "Carlos",
                     "Steven",
+                    'H',
                     "Cali",
                     "Colombia"
             );
 
             Persona p2 = new Persona(
-                    111111111,
+                    222222222,
                     "Carolina",
                     "Molina",
+                    'M',
                     "Cali",
                     "Colombia"
             );
 
             Persona p3 = new Persona(
-                    222222222,
+                    333333333,
                     "Paula",
                     "Andrea",
+                    'M',
                     "Bogota",
                     "Colombia"
             );
 
             Persona p4 = new Persona(
-                    222222222,
+                    444444444,
                     "Aura",
                     "Maria",
+                    'M',
                     "Bogota",
+                    "Colombia"
+            );
+
+            Persona p5 = new Persona(
+                    555555555,
+                    "Carlos",
+                    "Manuel",
+                    'H',
+                    "Bogota",
+                    "Colombia"
+            );
+
+            Persona p6 = new Persona(
+                    666666666,
+                    "Carlos",
+                    "Manuel",
+                    'H',
+                    "Medellin",
+                    "Colombia"
+            );
+
+            Persona p7 = new Persona(
+                    777777777,
+                    "Laura",
+                    "Sofia",
+                    'M',
+                    "Medellin",
+                    "Colombia"
+            );
+
+            Persona p8 = new Persona(
+                    888888888,
+                    "Camilo",
+                    "Muñoz",
+                    'H',
+                    "Pasto",
+                    "Colombia"
+            );
+
+            Persona p9 = new Persona(
+                    999999999,
+                    "Diana",
+                    "Carolina",
+                    'H',
+                    "Popayan",
+                    "Colombia"
+            );
+
+            Persona p10 = new Persona(
+                    1010101010,
+                    "Daniela",
+                    "Murillo",
+                    'M',
+                    "Popayan",
                     "Colombia"
             );
 
@@ -196,10 +253,15 @@ public class Main {
             odb.store(p2);
             odb.store(p3);
             odb.store(p4);
+            odb.store(p5);
+            odb.store(p6);
+            odb.store(p7);
+            odb.store(p8);
+            odb.store(p9);
+            odb.store(p10);
 
         } finally {
             if (odb != null) {
-                // Close the database
                 odb.close();
             }
         }

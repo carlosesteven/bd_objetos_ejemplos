@@ -3,13 +3,15 @@ public class Persona {
     private int cedula;
     private String primer_nombre;
     private String segundo_nombre;
+    private char sexo;
     private String ciudad;
     private String pais;
 
-    public Persona(int cedula, String primero_nombre, String segundo_nombre, String ciudad, String pais) {
+    Persona(int cedula, String primer_nombre, String segundo_nombre, char sexo, String ciudad, String pais) {
         this.cedula = cedula;
-        this.primer_nombre = primero_nombre;
+        this.primer_nombre = primer_nombre;
         this.segundo_nombre = segundo_nombre;
+        this.sexo = sexo;
         this.ciudad = ciudad;
         this.pais = pais;
     }
@@ -54,5 +56,12 @@ public class Persona {
         this.segundo_nombre = segundo_nombre;
     }
 
+    public char getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(char sexo) {
+        this.sexo = sexo;
+    }
 }
 
