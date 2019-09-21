@@ -1,4 +1,4 @@
-package TALLER_BD.Objetos;
+package EJEMPLO_2.Objetos;
 
 public class Paises {
 
@@ -6,16 +6,11 @@ public class Paises {
     private int id;
     private String nombrePais;
 
-    //Contructores
-    public Paises() {
-    }
-
     public Paises(int id, String nombrePais) {
         this.id = id;
         this.nombrePais = nombrePais;
     }
 
-    //Metodos Getter y Setter
     public void setId(int id) {
         this.id = id;
     }
@@ -37,4 +32,6 @@ public class Paises {
         return nombrePais;
     }
 }
+
+
 

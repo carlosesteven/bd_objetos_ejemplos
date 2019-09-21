@@ -1,7 +1,7 @@
-package TALLER_BD;
+package EJEMPLO_2;
 
-import TALLER_BD.Objetos.Jugadores;
-import TALLER_BD.Objetos.Paises;
+import EJEMPLO_2.Objetos.Jugadores;
+import EJEMPLO_2.Objetos.Paises;
 import org.neodatis.odb.ODB;
 import org.neodatis.odb.ODBFactory;
 import org.neodatis.odb.Objects;

@@ -1,4 +1,4 @@
-package EJEMPLO.Objetos;
+package EJEMPLO_1.Objetos;
 
 public class Persona {
 

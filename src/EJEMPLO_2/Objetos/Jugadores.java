@@ -1,25 +1,20 @@
-package TALLER_BD.Objetos;
+package EJEMPLO_2.Objetos;
 
 public class Jugadores {
 
-    // Propiedades
     private String nombre;
     private String deporte;
     private int edad;
     private Paises pais;
 
-    // Constructores
-    public Jugadores() {
-    }
-
-    public Jugadores(String nombre, String deporte,Paises pais, int edad ) {
+    public Jugadores(String nombre, String deporte,Paises pais, int edad )
+    {
         this.nombre = nombre;
         this.deporte = deporte;
         this.edad = edad;
         this.pais = pais;
     }
 
-    // Métodos Getter y Setter
     public String getNombre() {
         return nombre;
     }
@@ -52,4 +47,7 @@ public class Jugadores {
         return pais;
     }
 
-} // F
+}
+
+
+

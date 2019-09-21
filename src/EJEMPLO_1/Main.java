@@ -1,17 +1,12 @@
-package EJEMPLO;
+package EJEMPLO_1;
 
-import EJEMPLO.Objetos.Persona;
+import EJEMPLO_1.Objetos.Persona;
 import org.neodatis.odb.ODB;
 import org.neodatis.odb.ODBFactory;
 import org.neodatis.odb.Objects;
 import org.neodatis.odb.core.query.IQuery;
 import org.neodatis.odb.core.query.criteria.Where;
 import org.neodatis.odb.impl.core.query.criteria.CriteriaQuery;
-
-/**
- * USANDO: http://neodatis.wikidot.com/start
- * BASE DEL EJEMPLO: http://www.programandoapasitos.com/2016/03/acceso-datos-neodatis.html
- */
 
 public class Main {
 
@@ -21,10 +16,10 @@ public class Main {
     {
         borrarBaseDatosActual();
         insertaDatos();
-        cantidadDatos();
-        ordenarPorNombre();
-        filtraPorCiudaBogota();
-        filtraPorCiudaCali();
+        //cantidadDatos();
+        //ordenarPorNombre();
+        //filtraPorCiudaBogota();
+        //filtraPorCiudaCali();
     }
 
     private static void filtraPorCiudaCali()
