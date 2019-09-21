@@ -14,11 +14,11 @@ public class Main {
 
     public static void main(String[] args)
     {
-        borrarBaseDatosActual();
-        insertaDatos();
+        //borrarBaseDatosActual();
+        //insertaDatos();
         //cantidadDatos();
         //ordenarPorNombre();
-        //filtraPorCiudaBogota();
+        filtraPorCiudaBogota();
         //filtraPorCiudaCali();
     }
 
